@@ -8,14 +8,8 @@ module metastable_core (
 
     wire [3:0] carry_out;
     reg  [3:0] sampled;
-/*
-    carry4_chain carry_inst (
-        .clk_out(clk_out),
-        .carry_out(carry_out)
-    );
-*/
 
-CARRY4 carry_inst (
+    CARRY4 carry_inst (                        //    CARRY4 is inbuilt logic of Xilinx
         .CI     (1'b0),
         .CYINIT (clk_out),
         .DI     (4'b1111),
